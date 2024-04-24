@@ -1,5 +1,9 @@
-// Import Three.js (also linked to as import map in HTML)
+/// Import Three.js (also linked to as import map in HTML)
 import * as THREE from 'three';
+
+// Import add-ons
+import { OrbitControls } from 'https://unpkg.com/three@0.162.0/examples/jsm/controls/OrbitControls.js';
+import { GLTFLoader } from 'https://unpkg.com/three@0.162.0/examples/jsm/loaders/GLTFLoader.js'; // to load 3d models
 
 const scene = new THREE.Scene();
 
@@ -13,19 +17,20 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 
 camera.position.z = 50;
 
-/////// OGGGGG ///// 1ST SPHERE///////////////////
-// const geometry1 = new THREE.SphereGeometry(20);
-// const texture1 = new THREE.TextureLoader().load('textures/G.gif');
-// const material1 = new THREE.MeshBasicMaterial({ map: texture1 });
-// const sphere1 = new THREE.Mesh(geometry1, material1);
-// sphere1.position.z = -55;
-// sphere1.position.x = -10;
-// scene.add(sphere1);
-///////////////////////////////////
+
+
+//////////3D GLTF /////////
+// loader.load('assets/GREENBUBBLE.gltf', function (gltf) {
+//     const yourModel = gltf.scene;
+//     scene.add(yourModel);
+//     yourModel.scale.set(0.1, 0.1, -10); // Adjust scale as needed
+// }, undefined, function (error) {
+//     console.error(error);
+// });
 
 
 
-
+////////////////////
 
 
 
@@ -79,6 +84,13 @@ sphere4.position.x = 20; // Change the x position
 sphere4.position.y = -20; 
 scene.add(sphere4);
 ///////////////////////////////////
+
+
+
+
+
+
+
 
 
 
@@ -277,7 +289,7 @@ function animate() {
     sphere3.rotation.z += 0.01;
     sphere4.rotation.z += 0.01;
     sphere5.rotation.z += 0.01;
-    renderer.render(scene, camera);
+    renderer.render(scene, camera, renderer.domElement);
 }
 
 animate();
