@@ -5,11 +5,22 @@ import * as THREE from 'three';
 import { OrbitControls } from 'https://unpkg.com/three@0.162.0/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'https://unpkg.com/three@0.162.0/examples/jsm/loaders/GLTFLoader.js'; // to load 3d models
 
-const scene = new THREE.Scene();
+///////CREATE SCENE //////////////////
+let scene, camera, renderer, happy;
 
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-const renderer = new THREE.WebGLRenderer({
+
+function init() {
+    scene = new THREE.Scene();
+    
+    
+    
+    
+    const scene = new THREE.Scene();
+
+camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+renderer = new THREE.WebGLRenderer({
     canvas: document.querySelector('#bg'),
 });
 
@@ -19,18 +30,30 @@ camera.position.z = 50;
 
 
 
-//////////3D GLTF /////////
-// loader.load('assets/GREENBUBBLE.gltf', function (gltf) {
-//     const yourModel = gltf.scene;
-//     scene.add(yourModel);
-//     yourModel.scale.set(0.1, 0.1, -10); // Adjust scale as needed
-// }, undefined, function (error) {
-//     console.error(error);
-// });
 
 
 
-////////////////////
+
+//////ADD ONS / 3D MODEL ////////////////
+const controls = new OrbitControls(camera, renderer.domElement);
+const loader = new GLTFLoader(); // to load 3d models
+
+loader.load('assets/GLOBBYFIG.gltf', function (gltf) {
+    globby = gltf.scene;
+    scene.add(globby);
+    globby.scale.set(3, 3, 3);
+});
+
+console.error(error);
+
+
+
+
+
+
+
+
+
 
 
 
