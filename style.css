@@ -1,0 +1,110 @@
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1; /* Move the canvas behind other elements */
+    
+}
+
+bg {
+    position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1; /* Move the canvas behind other elements */
+        
+}
+
+
+
+header {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    font-size: 83px;
+    right: 800px;
+    z-index: 1; /* Ensure the header is above the canvas */
+}
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('/fonts/marola.TTF') format('truetype');
+   
+ 
+}
+
+/* Apply font families directly to specific elements */
+
+h1 {
+    font-family: 'CustomFont', sans-serif;
+    /* Apply CustomFont to all h1 elements */
+    position: absolute;
+    font-size: 300px;
+    right: -600px;
+}
+
+h2 {
+    position: absolute;
+    bottom: 1px;
+    font-size: 100px;
+    left: 650px;
+    font-family: 'CustomFont', sans-serif;
+    /* Apply CustomFont to all h1 elements */
+}
+
+h3 {
+    font-family: 'CustomFont';
+    src: url('/fonts/marola.TTF') format('truetype');
+    font-size: 250px;
+    right: -180px;
+}
+
+h4 {
+    font-family: 'CustomFont';
+    src: url('/fonts/marola.TTF') format('truetype');
+    position: absolute;
+    font-size: 200px;
+    left: -100px;
+}
+
+
+
+a {
+    text-decoration: none; /* Remove underline */
+    color: rgb(17, 190, 60); 
+    /* Add additional styles as needed */
+}
+
+
+#glob {
+    
+    top: 10px;
+    
+    transform: scale(0.5);
+    }
+    
+    #glob2 {
+        top: 10px;
+        transform: scale(0.7);
+    }
+    
+    #glob3 {
+        
+        transform: scale(0.7);
+     
+      
+      }
+
+      #glob4 {
+        transform: scale(0.8);
+     
+      
+      }
+    
+      #glob5 {
+        transform: scale(0.7);
+     
+      
+      }
+
+     
+    
