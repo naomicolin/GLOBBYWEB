@@ -1,3 +1,4 @@
+
 canvas {
     position: fixed;
     top: 0;
@@ -6,9 +7,15 @@ canvas {
     
 }
 
-main {
-    position: absolute;
+bg {
+    position: fixed;
+        top: 0;
+        left: 0;
+        z-index: -1; /* Move the canvas behind other elements */
+        
 }
+
+
 
 header {
     position: absolute;
@@ -67,3 +74,37 @@ a {
     /* Add additional styles as needed */
 }
 
+
+#glob {
+    
+    top: 10px;
+    
+    transform: scale(0.5);
+    }
+    
+    #glob2 {
+        top: 10px;
+        transform: scale(0.7);
+    }
+    
+    #glob3 {
+        
+        transform: scale(0.7);
+     
+      
+      }
+
+      #glob4 {
+        transform: scale(0.8);
+     
+      
+      }
+    
+      #glob5 {
+        transform: scale(0.7);
+     
+      
+      }
+
+     
+    
