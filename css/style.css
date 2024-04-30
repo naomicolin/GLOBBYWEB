@@ -1,4 +1,5 @@
-canvas {
+canvas, 
+bg {
     position: fixed;
     top: 0;
     left: 0;
@@ -6,10 +7,7 @@ canvas {
 }
 
 bg {
-    position: fixed;
-    top: 0;
-    left: 0; /* Adjusted left position */
-    z-index: -1; /* Move the canvas behind other elements */
+    left: 500; /* Adjusted left position */
 }
 
 header {
@@ -20,14 +18,33 @@ header {
     z-index: 1; /* Ensure the header is above the canvas */
 }
 
+
+.image-div {
+    display: absolute; /* Ensure elements are displayed inline */
+    margin: 1px; /* Adjust margin as needed */
+    padding: 0px; /* Adjust padding as needed */
+}
+
+
+
+
+
+
 @font-face {
-    font-family: 'CustomFont';
+    font-family: 'Marola';
     src: url('/fonts/marola.TTF') format('truetype');
 }
 
 /* Apply font families directly to specific elements */
+h1, 
+h2, 
+h3, 
+h4,
+a {
+    font-family: 'Marola', sans-serif;
+}
+
 h1 {
-    font-family: 'CustomFont', sans-serif;
     position: absolute;
     font-size: 500px;
     right: -800px;
@@ -38,17 +55,14 @@ h2 {
     bottom: 1px;
     font-size: 100px;
     left: 450px;
-    font-family: 'CustomFont', sans-serif;
 }
 
 h3 {
-    font-family: 'CustomFont';
     font-size: 250px;
     right: -180px;
 }
 
 h4 {
-    font-family: 'CustomFont';
     position: absolute;
     font-size: 200px;
     left: -100px;
@@ -68,22 +82,11 @@ a {
 #glob,
 #glob1,
 #glob2,
-#glob3,
-#glob4,
 #glob5,
 #glob6,
 #glob7,
 #glob8 {
     position: relative; /* Set position to relative */
-}
-
-#glob,
-#glob1,
-#glob2,
-#glob5,
-#glob6,
-#glob7,
-#glob8 {
     transform-origin: top left; /* Set transform origin to top left */
 }
 
@@ -107,15 +110,8 @@ a {
     transform: scale(0.8);
 }
 
-#glob5 {
-    transform: scale(0.7);
-}
-
-#glob6 {
-    transform: scale(0.7);
-    left: 0;
-}
-
+#glob5,
+#glob6,
 #glob7 {
     transform: scale(0.7);
     left: 0;
@@ -123,6 +119,11 @@ a {
 
 #glob8 {
     left: 0;
+    transform: scale(0.5);
 }
 
 
+#glob9 {
+    left: 10;
+    transform: scale(0.5);
+}

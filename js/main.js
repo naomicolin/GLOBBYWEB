@@ -3,7 +3,7 @@ import { OrbitControls } from 'https://unpkg.com/three@0.162.0/examples/jsm/cont
 import { GLTFLoader } from 'https://unpkg.com/three@0.162.0/examples/jsm/loaders/GLTFLoader.js';
 
 let scene, camera, renderer;
-let globby, sphere1, sphere2, sphere3, sphere4, sphere5, sphere6;
+let globby, sphere1, sphere2, sphere3, sphere4, sphere5, sphere6, sphere7;
 let cameraPosition = { x: 0, y: 0, z: 50 };
 
 function init() {
@@ -20,7 +20,7 @@ function init() {
         canvas: document.querySelector('#bg'),
     });
     renderer.setSize(window.innerWidth, window.innerHeight);
-    camera.position.z = 20;
+    camera.position.z = 50;
 
     const controls = new OrbitControls(camera, renderer.domElement);
     const loader = new GLTFLoader();
@@ -83,6 +83,19 @@ function init() {
     sphere6.position.set(13, -20, -220);
     scene.add(sphere6);
 
+
+
+    // 7tH SPHERE
+    const geometry7 = new THREE.SphereGeometry(50);
+    const material7 = new THREE.MeshBasicMaterial({ map: texture });
+    sphere7 = new THREE.Mesh(geometry7, material7);
+    sphere7.position.set(13, 1200, -420);
+    scene.add(sphere7);
+
+
+
+
+
     animate();
 }
 
@@ -108,6 +121,7 @@ document.addEventListener('mousemove', (event) => {
     jiggleSphere(sphere4, event);
     jiggleSphere(sphere5, event);
     jiggleSphere(sphere6, event);
+    jiggleSphere(sphere7, event);
 });
 
 function moveCamera() {
@@ -127,6 +141,7 @@ function animate() {
     sphere4.rotation.z += 0.01;
     sphere5.rotation.z += 0.01;
     sphere6.rotation.z += 0.01;
+    sphere7.rotation.z += 0.01;
     renderer.render(scene, camera);
 }
 
@@ -134,7 +149,7 @@ console.log("hello hello");
 
 document.querySelector("#glob").addEventListener("click", function(){
     // Play the audio
-    const audio = new Audio('assets/BLOOP.mp3');
+    const audio = new Audio('assets/SLIME.mp3');
     audio.play();
 
     // Change the color of the font
@@ -152,6 +167,9 @@ function getRandomColor() {
 }
 
 
+
+
+
 document.querySelector("#glob1").addEventListener("click", function(){
     // Play the audio
     const audio = new Audio('assets/BLOOP.mp3');
@@ -161,9 +179,13 @@ document.querySelector("#glob1").addEventListener("click", function(){
     document.querySelector("#glob1").style.visibility = "hidden";
 });
 
+
+
+
+
 document.querySelector("#glob2").addEventListener("click", function(){
     // Play the audio
-    const audio = new Audio('assets/BLOOP2.mp3');
+    const audio = new Audio('assets/GALP.mp3');
     audio.play();
 
     // Hide the element
@@ -172,7 +194,7 @@ document.querySelector("#glob2").addEventListener("click", function(){
 
 document.querySelector("#glob3").addEventListener("click", function(){
     // Play the audio
-    const audio = new Audio('assets/GALP.mp3');
+    const audio = new Audio('assets/BLOOP2.mp3');
     audio.play();
 
     // Hide the element
@@ -204,17 +226,53 @@ document.querySelector("#glob6").addEventListener("click", function(){
     audio.play();
 
     // Hide the element
-    document.querySelector("#glob").style.visibility = "hidden";
+    document.querySelector("#glob6").style.visibility = "hidden";
 });
 
 document.querySelector("#glob7").addEventListener("click", function(){
     // Play the audio
-    const audio = new Audio('assets/GLOOP.mp3');
+    const audio = new Audio('assets/TYPE.mp3');
     audio.play();
 
     // Hide the element
     document.querySelector("#glob7").style.visibility = "hidden";
 });
+
+
+
+
+document.querySelector("#glob8").addEventListener("click", function(){
+    // Play the audio
+    const audio = new Audio('assets/PRESS.mp3');
+    audio.play();
+
+    // Hide the element
+    document.querySelector("#glob8").style.visibility = "hidden";
+});
+
+document.querySelector("#glob9").addEventListener("click", function(){
+    // Play the audio
+    const audio = new Audio('assets/PRESS2.mp3');
+    audio.play();
+
+    // Hide the element
+    document.querySelector("#glob9").style.visibility = "hidden";
+});
+
+// document.querySelector("#glob10").addEventListener("click", function(){
+//     // Play the audio
+//     const audio = new Audio('assets/BLOOP.mp3');
+//     audio.play();
+
+//     // Hide the element
+//     document.querySelector("#glob10").style.visibility = "hidden";
+// });
+
+
+
+
+
+
 
 
 
