@@ -1,42 +1,33 @@
-
 canvas {
     position: fixed;
     top: 0;
     left: 0;
     z-index: -1; /* Move the canvas behind other elements */
-    
 }
 
 bg {
     position: fixed;
-        top: 0;
-        left: 50;
-        z-index: -1; /* Move the canvas behind other elements */
-        
+    top: 0;
+    left: 0; /* Adjusted left position */
+    z-index: -1; /* Move the canvas behind other elements */
 }
-
-
 
 header {
     position: absolute;
     color: rgb(0, 0, 0);
     font-size: 83px;
-    right: 800px;
+    left: 1100px;
     z-index: 1; /* Ensure the header is above the canvas */
 }
 
 @font-face {
     font-family: 'CustomFont';
     src: url('/fonts/marola.TTF') format('truetype');
-   
- 
 }
 
 /* Apply font families directly to specific elements */
-
 h1 {
     font-family: 'CustomFont', sans-serif;
-    /* Apply CustomFont to all h1 elements */
     position: absolute;
     font-size: 500px;
     right: -800px;
@@ -48,95 +39,90 @@ h2 {
     font-size: 100px;
     left: 450px;
     font-family: 'CustomFont', sans-serif;
-    /* Apply CustomFont to all h1 elements */
 }
 
 h3 {
     font-family: 'CustomFont';
-    src: url('/fonts/marola.TTF') format('truetype');
     font-size: 250px;
     right: -180px;
 }
 
 h4 {
     font-family: 'CustomFont';
-    src: url('/fonts/marola.TTF') format('truetype');
     position: absolute;
     font-size: 200px;
     left: -100px;
 }
 
-
-
-
 a {
     text-decoration: none; /* Remove underline */
-    color: rgb(17, 190, 60); 
+    color: rgb(8, 154, 45); 
     /* Add additional styles as needed */
 }
 
+/* Adjustments for scaling and positioning */
+.image-div {
+    padding: 20px; /* Add padding to create space around the content */
+}
+
+#glob,
+#glob1,
+#glob2,
+#glob3,
+#glob4,
+#glob5,
+#glob6,
+#glob7,
+#glob8 {
+    position: relative; /* Set position to relative */
+}
+
+#glob,
+#glob1,
+#glob2,
+#glob5,
+#glob6,
+#glob7,
+#glob8 {
+    transform-origin: top left; /* Set transform origin to top left */
+}
 
 #glob {
-    
-    top: 10px;
-    
     transform: scale(0.5);
-    }
-    
-    #glob1 {
-        top: 10px;
-        transform: scale(0.4);
-    }
+}
+
+#glob1 {
+    transform: scale(0.4);
+}
+
+#glob2 {
+    transform: scale(0.5);
+}
+
+#glob3 {
+    transform: scale(0.7);
+}
+
+#glob4 {
+    transform: scale(0.8);
+}
+
+#glob5 {
+    transform: scale(0.7);
+}
+
+#glob6 {
+    transform: scale(0.7);
+    left: 0;
+}
+
+#glob7 {
+    transform: scale(0.7);
+    left: 0;
+}
+
+#glob8 {
+    left: 0;
+}
 
 
-    #glob2 {
-        top: 10px;
-        transform: scale(0.5);
-    }
-
-
-
-    
-    #glob3 {
-        
-        transform: scale(0.7);
-     
-      
-      }
-
-      #glob4 {
-        transform: scale(0.8);
-     
-      
-      }
-    
-      #glob5 {
-        transform: scale(0.7);
-     
-      
-      }
-
-
-      #glob6 {
-        transform: scale(0.7);
-        left: -400px;
-     
-      
-      }
-
-      #glob7 {
-        transform: scale(0.7);
-        left: -900px;
-     
-      
-      }
-
-      #glob8 {
-        
-        left: -400px;
-     
-      
-      }
-
-     
-    
