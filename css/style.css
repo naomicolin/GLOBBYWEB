@@ -27,7 +27,7 @@ header {
 
 @font-face {
     font-family: 'CustomFont';
-    src: url('marola.TTF') format('truetype');
+    src: url('/fonts/marola.TTF') format('truetype');
    
  
 }
