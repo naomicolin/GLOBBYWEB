@@ -157,6 +157,19 @@ document.querySelector("#glob").addEventListener("click", function(){
 });
 
 
+document.querySelector("#glob1").addEventListener("click", function(){
+    // Play the audio
+    const audio = new Audio('assets/BLOOP.mp3'); // 
+    audio.play();
+
+    // Hide the element
+    document.querySelector("#glob1").style.visibility = "hidden";
+});
+
+
+
+
+
 
 document.querySelector("#glob2").addEventListener("click", function(){
     // Play the audio

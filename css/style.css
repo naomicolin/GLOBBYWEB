@@ -38,15 +38,15 @@ h1 {
     font-family: 'CustomFont', sans-serif;
     /* Apply CustomFont to all h1 elements */
     position: absolute;
-    font-size: 300px;
-    right: -600px;
+    font-size: 500px;
+    right: -800px;
 }
 
 h2 {
     position: absolute;
     bottom: 1px;
     font-size: 100px;
-    left: 650px;
+    left: 450px;
     font-family: 'CustomFont', sans-serif;
     /* Apply CustomFont to all h1 elements */
 }
@@ -68,6 +68,7 @@ h4 {
 
 
 
+
 a {
     text-decoration: none; /* Remove underline */
     color: rgb(17, 190, 60); 
@@ -82,10 +83,19 @@ a {
     transform: scale(0.5);
     }
     
+    #glob1 {
+        top: 10px;
+        transform: scale(0.4);
+    }
+
+
     #glob2 {
         top: 10px;
-        transform: scale(0.7);
+        transform: scale(0.5);
     }
+
+
+
     
     #glob3 {
         
@@ -102,6 +112,28 @@ a {
     
       #glob5 {
         transform: scale(0.7);
+     
+      
+      }
+
+
+      #glob6 {
+        transform: scale(0.7);
+        left: -400px;
+     
+      
+      }
+
+      #glob7 {
+        transform: scale(0.9);
+        left: -400px;
+     
+      
+      }
+
+      #glob8 {
+        
+        left: -400px;
      
       
       }
