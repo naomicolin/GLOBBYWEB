@@ -25,8 +25,6 @@ function init() {
     const controls = new OrbitControls(camera, renderer.domElement);
     const loader = new GLTFLoader();
 
-    
-
     loader.load('assets/GLOBBYFIG.gltf', function (gltf) {
         globby = gltf.scene;
         globby.scale.set(6, 6, 6);
@@ -40,12 +38,6 @@ function init() {
         globby.position.set(50, 2, -50);
         scene.add(globby);
     });
-
-   
-
-
-
-
 
     const texture = new THREE.TextureLoader().load('textures/GSHINE.jpg');
 
@@ -84,7 +76,6 @@ function init() {
     sphere5.position.set(23, -10, -110);
     scene.add(sphere5);
 
-
     // 6tH SPHERE
     const geometry6 = new THREE.SphereGeometry(30);
     const material6 = new THREE.MeshBasicMaterial({ map: texture });
@@ -93,8 +84,6 @@ function init() {
     scene.add(sphere6);
 
     animate();
-
-    
 }
 
 function jiggleSphere(sphere, event) {
@@ -141,52 +130,49 @@ function animate() {
     renderer.render(scene, camera);
 }
 
-
-
-////////////
-////////////
 console.log("hello hello");
 
 document.querySelector("#glob").addEventListener("click", function(){
     // Play the audio
-    const audio = new Audio('assets/BLOOP.mp3'); // 
+    const audio = new Audio('assets/BLOOP.mp3');
     audio.play();
 
-    // Hide the element
-    document.querySelector("#glob").style.visibility = "hidden";
+    // Change the color of the font
+    document.querySelector("#glob").style.color = getRandomColor();
 });
+
+// Function to generate random color
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
 
 
 document.querySelector("#glob1").addEventListener("click", function(){
     // Play the audio
-    const audio = new Audio('assets/BLOOP.mp3'); // 
+    const audio = new Audio('assets/BLOOP.mp3');
     audio.play();
 
     // Hide the element
     document.querySelector("#glob1").style.visibility = "hidden";
 });
 
-
-
-
-
-
 document.querySelector("#glob2").addEventListener("click", function(){
     // Play the audio
-    const audio = new Audio('assets/BLAP.mp3'); // 
+    const audio = new Audio('assets/BLOOP2.mp3');
     audio.play();
 
     // Hide the element
     document.querySelector("#glob2").style.visibility = "hidden";
 });
 
-
-
-
-
 document.querySelector("#glob3").addEventListener("click", function(){
     // Play the audio
-    const audio = new Audio('assets/GALP.mp3'); // 
+    const audio = new Audio('assets/GALP.mp3');
     audio.play();
 
     // Hide the element
@@ -195,17 +181,16 @@ document.querySelector("#glob3").addEventListener("click", function(){
 
 document.querySelector("#glob4").addEventListener("click", function(){
     // Play the audio
-    const audio = new Audio('assets/GULP.mp3'); // 
+    const audio = new Audio('assets/GULP.mp3');
     audio.play();
 
     // Hide the element
     document.querySelector("#glob4").style.visibility = "hidden";
 });
 
-
 document.querySelector("#glob5").addEventListener("click", function(){
     // Play the audio
-    const audio = new Audio('assets/GLOOP.mp3'); // 
+    const audio = new Audio('assets/GLOOP.mp3');
     audio.play();
 
     // Hide the element
@@ -213,14 +198,23 @@ document.querySelector("#glob5").addEventListener("click", function(){
 });
 
 
+document.querySelector("#glob6").addEventListener("click", function(){
+    // Play the audio
+    const audio = new Audio('assets/GLOOP.mp3');
+    audio.play();
 
+    // Hide the element
+    document.querySelector("#glob").style.visibility = "hidden";
+});
 
+document.querySelector("#glob7").addEventListener("click", function(){
+    // Play the audio
+    const audio = new Audio('assets/GLOOP.mp3');
+    audio.play();
 
-
-
-
-
-
+    // Hide the element
+    document.querySelector("#glob7").style.visibility = "hidden";
+});
 
 
 
